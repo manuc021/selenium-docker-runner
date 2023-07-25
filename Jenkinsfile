@@ -3,7 +3,7 @@ pipeline {
 	stages{
 		stage("Start Grid"){
 			steps{
-			 bat "docker-compose up -d hub --scale chrome=4 firefox=2"
+			 bat "docker-compose up -d hub --scale chrome=4 --scale firefox=4"
 			}
 		}
 		stage("Run Test"){
