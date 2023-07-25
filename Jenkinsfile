@@ -3,15 +3,15 @@ pipeline {
 	stages{
 		stage("Start Grid"){
 			steps{
-			 bat "docker-compose up -d hub firefox chrome"
+			 bat "docker-compose up -d hub chrome firefox"
 			}
 		}
 		stage("Run Test"){
 			steps{
-			 bat "docker-compose up book-flight-module search-module"
+			 bat "docker-compose up search-module book-flight-module"
 			}
 		}
-		stage("Storp Grid"){
+		stage("Stop Grid"){
 			steps {
 			 bat "docker-compose down"
 			}
