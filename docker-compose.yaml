@@ -2,7 +2,7 @@ version: "3"
 services:
   hub:
     image: selenium/hub:4.1.0
-    chrome:
+  chrome:
     image: selenium/node-chrome:4.1.0
     shm_size: '2g'        
     depends_on:
