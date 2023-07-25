@@ -14,7 +14,7 @@ pipeline {
 	}
 	post{
 		always {
-			archiveArtifacts artifacts: "C:\Users\MANU\eclipse-workspace\output\**"
+			archiveArtifacts artifacts: "C:\\Users\\MANU\\eclipse-workspace\\output\\**"
 			bat "docker-compose down"
 		}
 	}
