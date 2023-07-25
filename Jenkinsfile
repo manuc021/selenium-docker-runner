@@ -6,10 +6,10 @@ pipeline {
 				docker-compose up
 			}
 		}
-		stage("Bring Grid down")
+		stage("Bring Grid down"){
 			steps {
 				docker-compose down
 			}
-
+		}
 	}
 }
