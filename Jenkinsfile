@@ -11,15 +11,11 @@ pipeline {
 			 bat "docker-compose up book-flight-module search-module"
 			}
 		}
-		stage("Storp Grid"){
-			steps {
-			 bat "docker-compose down"
-			}
-		}
 	}
 	post{
 		always {
-			archiveArtifacts artifacts:"C:\Users\MANU\eclipse-workspace\"
+			archiveArtifacts artifacts: "C:\Users\MANU\eclipse-workspace\output\**"
+			bat "docker-compose down"
 		}
 	}
 }
