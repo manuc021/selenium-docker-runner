@@ -17,4 +17,9 @@ pipeline {
 			}
 		}
 	}
+	post{
+		always {
+			archiveArtifacts artifacts:"C:\Users\MANU\eclipse-workspace\"
+		}
+	}
 }
