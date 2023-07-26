@@ -30,7 +30,7 @@ services:
       - HUB_HOST=hub
       - MODULE=search-module.xml
       volumes:
-      - C:\Users\MANU\eclipse-workspace\output\test-output\search-result:/usr/share/udmey/test-output
+      - ./output/search-result:/usr/share/udmey/test-output
   book-flight-module:
       image: mac021/selenium-docker
       depends_on:
@@ -41,5 +41,5 @@ services:
       - HUB_HOST=hub
       - MODULE=book-flight-module.xml
       volumes:
-      - C:\Users\MANU\eclipse-workspace\output\test-output\book-flight:/usr/share/udmey/test-output
+      - ./output/book-flight:/usr/share/udmey/test-output
 
