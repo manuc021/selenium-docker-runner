@@ -3,7 +3,7 @@ pipeline {
 	stages{
 		stage("Start Grid"){
 			steps{
-			 bat "docker-compose up -d hub --scale chromenode=5"
+			 bat "docker-compose up -d hub --scale chrome=5"
 			}
 		}
 		stage("Run Test"){
